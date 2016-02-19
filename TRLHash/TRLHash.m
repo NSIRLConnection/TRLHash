@@ -11,7 +11,13 @@
 @implementation TRLHash
 
 + (NSUInteger)unsignedIntegerFromString:(NSString *)string {
-    return 0;
+    NSInteger hash = 7;
+    NSString *letters = @"acdegilmnoprstuw";
+    for (NSInteger i = 0; i < string.length; i++) {
+        NSString *character = [string substringWithRange:NSMakeRange(i, 1)];
+        hash = (hash * 37 + [letters rangeOfString:character].location);
+    }
+    return hash;
 }
 
 + (NSString *)stringWithUnsignedInteger:(NSUInteger)unsignedInteger expectedStringLength:(NSUInteger)stringLength {
