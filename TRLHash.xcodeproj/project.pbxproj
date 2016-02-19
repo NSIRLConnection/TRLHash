@@ -12,6 +12,7 @@
 		0E84E5531C77DB66000B82F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E84E5521C77DB66000B82F3 /* Assets.xcassets */; };
 		0E84E5561C77DB66000B82F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E84E5541C77DB66000B82F3 /* LaunchScreen.storyboard */; };
 		0E84E5611C77DB66000B82F3 /* TRLHashTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E84E5601C77DB66000B82F3 /* TRLHashTests.m */; };
+		0E84E56D1C77DC13000B82F3 /* TRLHash.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E84E56C1C77DC13000B82F3 /* TRLHash.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +36,8 @@
 		0E84E55C1C77DB66000B82F3 /* TRLHashTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TRLHashTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E84E5601C77DB66000B82F3 /* TRLHashTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TRLHashTests.m; sourceTree = "<group>"; };
 		0E84E5621C77DB66000B82F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0E84E56B1C77DC13000B82F3 /* TRLHash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRLHash.h; sourceTree = "<group>"; };
+		0E84E56C1C77DC13000B82F3 /* TRLHash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRLHash.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +81,8 @@
 			children = (
 				0E84E5491C77DB66000B82F3 /* AppDelegate.h */,
 				0E84E54A1C77DB66000B82F3 /* AppDelegate.m */,
+				0E84E56B1C77DC13000B82F3 /* TRLHash.h */,
+				0E84E56C1C77DC13000B82F3 /* TRLHash.m */,
 				0E84E5521C77DB66000B82F3 /* Assets.xcassets */,
 				0E84E5541C77DB66000B82F3 /* LaunchScreen.storyboard */,
 				0E84E5571C77DB66000B82F3 /* Info.plist */,
@@ -203,6 +208,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E84E54B1C77DB66000B82F3 /* AppDelegate.m in Sources */,
+				0E84E56D1C77DC13000B82F3 /* TRLHash.m in Sources */,
 				0E84E5481C77DB66000B82F3 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,6 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "TRLHash.h"
 
 @interface TRLHashTests : XCTestCase
 
@@ -24,16 +25,12 @@
     [super tearDown];
 }
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
+- (void)testThatItUnhashesTrelloOutputExample {
+    XCTAssertEqualObjects([TRLHash stringWithUnsignedInteger:680131659347 expectedStringLength:7], @"leepadg");
 }
 
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
-    }];
+- (void)testThatItHashesToTrelloInputExample {
+    XCTAssertEqual([TRLHash unsignedIntegerFromString:@"leepadg"], 680131659347);
 }
 
 @end
