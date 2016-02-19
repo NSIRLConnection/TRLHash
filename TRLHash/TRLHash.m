@@ -21,7 +21,18 @@
 }
 
 + (NSString *)stringWithUnsignedInteger:(NSUInteger)unsignedInteger expectedStringLength:(NSUInteger)stringLength {
-    return nil;
+    NSMutableArray *indexes = [NSMutableArray array];
+    NSString *letters = @"acdegilmnoprstuw";
+    for (NSInteger i = 0; i < stringLength; i++) {
+        NSInteger index = unsignedInteger % 37;
+        [indexes insertObject:@(index) atIndex:0];
+        unsignedInteger /= 37;
+    }
+    NSString *unhashedString = [NSString string];
+    for (NSNumber *index in indexes) {
+        unhashedString = [unhashedString stringByAppendingString:[letters substringWithRange:NSMakeRange(index.integerValue, 1)]];
+    }
+    return unhashedString;
 }
 
 @end
