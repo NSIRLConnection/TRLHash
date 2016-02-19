@@ -10,9 +10,10 @@
 
 @implementation TRLHash
 
+static const NSString *letters = @"acdegilmnoprstuw";
+
 + (NSUInteger)unsignedIntegerFromString:(NSString *)string {
     NSInteger hash = 7;
-    NSString *letters = @"acdegilmnoprstuw";
     for (NSInteger i = 0; i < string.length; i++) {
         NSString *character = [string substringWithRange:NSMakeRange(i, 1)];
         hash = (hash * 37 + [letters rangeOfString:character].location);
@@ -22,7 +23,6 @@
 
 + (NSString *)stringWithUnsignedInteger:(NSUInteger)unsignedInteger expectedStringLength:(NSUInteger)stringLength {
     NSMutableArray *indexes = [NSMutableArray array];
-    NSString *letters = @"acdegilmnoprstuw";
     for (NSInteger i = 0; i < stringLength; i++) {
         NSInteger index = unsignedInteger % 37;
         [indexes insertObject:@(index) atIndex:0];
