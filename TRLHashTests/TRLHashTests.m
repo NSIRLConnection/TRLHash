@@ -26,11 +26,15 @@
 }
 
 - (void)testThatItUnhashesTrelloOutputExample {
-    XCTAssertEqualObjects([TRLHash stringWithUnsignedInteger:680131659347 expectedStringLength:7], @"leepadg");
+    [self measureBlock:^{
+        XCTAssertEqualObjects([TRLHash stringWithUnsignedInteger:680131659347 expectedStringLength:7], @"leepadg");
+    }];
 }
 
 - (void)testThatItHashesToTrelloInputExample {
-    XCTAssertEqual([TRLHash unsignedIntegerFromString:@"leepadg"], 680131659347);
+    [self measureBlock:^{
+        XCTAssertEqual([TRLHash unsignedIntegerFromString:@"leepadg"], 680131659347);
+    }];
 }
 
 @end

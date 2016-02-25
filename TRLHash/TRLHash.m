@@ -21,7 +21,8 @@ static const NSString *letters = @"acdegilmnoprstuw";
     return hash;
 }
 
-+ (NSString *)stringWithUnsignedInteger:(NSUInteger)unsignedInteger expectedStringLength:(NSUInteger)stringLength {
++ (NSString *)stringWithUnsignedInteger:(NSUInteger)unsignedInteger
+                   expectedStringLength:(NSUInteger)stringLength {
     NSMutableArray *indexes = [NSMutableArray array];
     for (NSInteger i = 0; i < stringLength; i++) {
         NSInteger index = unsignedInteger % 37;
@@ -30,7 +31,9 @@ static const NSString *letters = @"acdegilmnoprstuw";
     }
     NSString *unhashedString = [NSString string];
     for (NSNumber *index in indexes) {
-        unhashedString = [unhashedString stringByAppendingString:[letters substringWithRange:NSMakeRange(index.integerValue, 1)]];
+        NSRange rangeOfCharacterToAppend = NSMakeRange(index.integerValue, 1);
+        NSString *stringToAppend = [letters substringWithRange:rangeOfCharacterToAppend];
+        unhashedString = [unhashedString stringByAppendingString:stringToAppend];
     }
     return unhashedString;
 }

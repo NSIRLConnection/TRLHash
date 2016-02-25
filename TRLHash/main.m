@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
+#import "TRLHash.h"
 
 int main(int argc, char * argv[]) {
     @autoreleasepool {
+        NSLog(@"%@",[TRLHash stringWithUnsignedInteger:25377615533200 expectedStringLength:8]);
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
     }
 }
